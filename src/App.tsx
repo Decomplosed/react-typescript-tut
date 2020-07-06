@@ -1,4 +1,5 @@
 import React from 'react';
+import PokemonSearch from './components/PokemonSearch'
 import './App.css';
 
 function App() {
