@@ -34,11 +34,12 @@ export class PokemonSearch extends Component<User, SearchState> {
         }
 
         res.json().then(data => {
+          console.log(data)
           this.setState({
             error: false,
             pokemon: {
               name: data.name,
-              numberOfAbilities: data.abilites.length,
+              numberOfAbilities: data.abilities.length,
               baseExperience: data.base_experience,
               imageUrl: data.sprites.front_default
             }
