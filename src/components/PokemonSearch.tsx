@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import User from '../interfaces/User.interface'
-import { spawn } from 'child_process'
 
 export class PokemonSearch extends Component<User> {
   render() {
