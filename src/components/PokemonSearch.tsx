@@ -47,11 +47,15 @@ export class PokemonSearch extends Component<User, SearchState> {
   render() {
     const {name: userName, numberOfPokemons} = this.props
     const {name, numberOfAbilities, baseExperience, imageUrl, error} = this.state
+
+    let resultMarkup
+
     return (
       <div>
         <p>User {userName} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}</p>
         <input type="text" ref={this.pokemonRef}/>
         <button onClick={this.onSearchClick} className='btn'>Search</button>
+        {resultMarkup}
       </div>
     )
   }
