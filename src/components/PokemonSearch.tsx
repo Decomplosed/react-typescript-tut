@@ -36,10 +36,12 @@ export class PokemonSearch extends Component<User, SearchState> {
         res.json().then(data => {
           this.setState({
             error: false,
-            name: data.name,
-            numberOfAbilities: data.abilites.length,
-            baseExperience: data.base_experience,
-            imageUrl: data.sprites.front_default
+            pokemon: {
+              name: data.name,
+              numberOfAbilities: data.abilites.length,
+              baseExperience: data.base_experience,
+              imageUrl: data.sprites.front_default
+            }
           })
         })
       })
@@ -47,7 +49,7 @@ export class PokemonSearch extends Component<User, SearchState> {
 
   render() {
     const {name: userName, numberOfPokemons} = this.props
-    const {name, numberOfAbilities, baseExperience, imageUrl, error} = this.state
+    const {pokemon: {name, numberOfAbilities, baseExperience, imageUrl}, error} = this.state
 
     let resultMarkup
 
