@@ -2,11 +2,15 @@ import React, { Component } from 'react'
 import User from '../interfaces/User.interface'
 
 interface SearchState {
+  error: boolean,
+  pokemon: Pokemon
+}
+
+interface Pokemon {
   name: string,
   numberOfAbilities: number,
   baseExperience: number,
   imageUrl: string,
-  error: boolean
 }
 
 export class PokemonSearch extends Component<User, SearchState> {
@@ -14,11 +18,8 @@ export class PokemonSearch extends Component<User, SearchState> {
   constructor(props: User) {
     super(props)
     this.state = {
-      name: '',
-      numberOfAbilities: 0,
-      baseExperience: 0,
-      imageUrl: '',
-      error: false
+      error: false,
+      pokemon: null
     }
     this.pokemonRef = React.createRef()
   }
