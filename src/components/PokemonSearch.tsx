@@ -6,7 +6,8 @@ export class PokemonSearch extends Component<User> {
     const {name, numberOfPokemons} = this.props
     return (
       <div>
-        User {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}
+        <p>User {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}</p>
+        <input type="text" ref={this.pokemonRef}/>
       </div>
     )
   }
