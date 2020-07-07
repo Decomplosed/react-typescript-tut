@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import User from '../interfaces/User.interface'
 
+interface SearchState {
+  name: string,
+  numberOfAbilities: number,
+  baseExperience: number,
+  imageUrl: string
+}
+
 export class PokemonSearch extends Component<User> {
   pokemonRef: React.RefObject<HTMLInputElement>
   constructor(props: User) {
