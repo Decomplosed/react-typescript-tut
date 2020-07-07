@@ -17,3 +17,7 @@
   border: 1px solid blue;
   background-color: white;
 }
+
+.pokemon-image {
+  margin: 20px auto;
+}
