@@ -6,7 +6,10 @@ export class PokemonSearch extends Component<User> {
   constructor(props: User) {
     super(props)
     this.state = {
-      
+      name: '',
+      numberOfAbilities: null,
+      baseExperience: null,
+      imageUrl: ''
     }
     this.pokemonRef = React.createRef()
   }
