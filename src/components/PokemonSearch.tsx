@@ -49,16 +49,16 @@ export class PokemonSearch extends Component<User, SearchState> {
 
   render() {
     const {name: userName, numberOfPokemons} = this.props
-    const {pokemon: {name, numberOfAbilities, baseExperience, imageUrl}, error} = this.state
+    const {pokemon, error} = this.state
 
     let resultMarkup
 
     if (error) {
       resultMarkup = <p>Pokemon not found, please try again</p>
-    } else {
+    } else if (this.state.pokemon) {
       resultMarkup = <div>
-        <img src={imageUrl} alt="pokemon" className='pokemon-image' />
-    <p>{name} has {numberOfAbilities} abilities and {baseExperience} base experience points.</p>
+        <img src={pokemon.imageUrl} alt="pokemon" className='pokemon-image' />
+    <p>{pokemon.name} has {pokemon.numberOfAbilities} abilities and {pokemon.baseExperience} base experience points.</p>
       </div>
     }
 
