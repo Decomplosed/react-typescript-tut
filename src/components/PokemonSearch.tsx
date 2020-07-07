@@ -52,6 +52,11 @@ export class PokemonSearch extends Component<User, SearchState> {
 
     if (error) {
       resultMarkup = <p>Pokemon not found, please try again</p>
+    } else {
+      resultMarkup = <div>
+        <img src={imageUrl} alt="pokemon" className='pokemon-image' />
+    <p>{name} has {numberOfAbilities} abilities and {baseExperience} base experience points.</p>
+      </div>
     }
 
     return (
