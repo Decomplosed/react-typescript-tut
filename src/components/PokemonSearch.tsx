@@ -17,9 +17,21 @@ export class PokemonSearch extends Component<User, SearchState> {
       name: '',
       numberOfAbilities: 0,
       baseExperience: 0,
-      imageUrl: ''
+      imageUrl: '',
+      error: false
     }
     this.pokemonRef = React.createRef()
+  }
+
+  onSearchClick = () => {
+    const inputValue = this.pokemonRef.current.value
+    fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}`)
+      .then(res => {
+        if(res.status !== 200){
+          this.setState({error: true})
+          return
+        }
+      })
   }
 
   render() {
