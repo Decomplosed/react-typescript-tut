@@ -5,7 +5,8 @@ interface SearchState {
   name: string,
   numberOfAbilities: number,
   baseExperience: number,
-  imageUrl: string
+  imageUrl: string,
+  error: boolean
 }
 
 export class PokemonSearch extends Component<User, SearchState> {
