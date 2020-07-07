@@ -50,6 +50,10 @@ export class PokemonSearch extends Component<User, SearchState> {
 
     let resultMarkup
 
+    if (error) {
+      resultMarkup = <p>Pokemon not found, please try again</p>
+    }
+
     return (
       <div>
         <p>User {userName} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}</p>
