@@ -8,14 +8,14 @@ interface SearchState {
   imageUrl: string
 }
 
-export class PokemonSearch extends Component<User> {
+export class PokemonSearch extends Component<User, SearchState> {
   pokemonRef: React.RefObject<HTMLInputElement>
   constructor(props: User) {
     super(props)
     this.state = {
       name: '',
-      numberOfAbilities: null,
-      baseExperience: null,
+      numberOfAbilities: 0,
+      baseExperience: 0,
       imageUrl: ''
     }
     this.pokemonRef = React.createRef()
