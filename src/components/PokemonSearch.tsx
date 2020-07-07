@@ -46,6 +46,7 @@ export class PokemonSearch extends Component<User, SearchState> {
 
   render() {
     const {name, numberOfPokemons} = this.props
+    const {name, numberOfAbilities, baseExperience, imageUrl, error} = this.state
     return (
       <div>
         <p>User {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}</p>
