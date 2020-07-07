@@ -5,6 +5,9 @@ export class PokemonSearch extends Component<User> {
   pokemonRef: React.RefObject<HTMLInputElement>
   constructor(props: User) {
     super(props)
+    this.state = {
+      
+    }
     this.pokemonRef = React.createRef()
   }
 
