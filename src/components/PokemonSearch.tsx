@@ -3,6 +3,9 @@ import User from '../interfaces/User.interface'
 
 export class PokemonSearch extends Component<User> {
   pokemonRef: React.RefObject<HTMLInputElement>
+  constructor(props: User) {
+    super(props)
+  }
 
   render() {
     const {name, numberOfPokemons} = this.props
