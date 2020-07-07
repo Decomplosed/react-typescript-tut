@@ -12,3 +12,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.btn {
+  border: 1px solid blue;
+  background-color: white;
+}
