@@ -8,6 +8,7 @@ export class PokemonSearch extends Component<User> {
       <div>
         <p>User {name} {numberOfPokemons && <span>has {numberOfPokemons} pokemons</span>}</p>
         <input type="text" ref={this.pokemonRef}/>
+        <button onClick={this.onSearchClick} className='btn'>Search</button>
       </div>
     )
   }
